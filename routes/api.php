@@ -1,9 +1,11 @@
 <?php
 
 use App\Http\Controllers\Api\AktorController;
+use App\Http\Controllers\Api\FilmController;
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\GenreController;
 use App\Http\Controllers\Api\KategoriController;
+use App\Models\Film;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -26,6 +28,7 @@ route::post('logout',[AuthController::class, 'logout']);
 route::resource('kategori', KategoriController::class);
 route::resource('genre', GenreController::class);
 route::resource('aktor', AktorController::class);
+route::resource('film', FilmController::class);
 });
 // auth//
 Route::post('login', [AuthController::class, 'login']);
