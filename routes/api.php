@@ -23,13 +23,13 @@ Route::get('/user', function (Request $request) {
 // Route::delete('kategori/{id}', [KategoriController::class, 'destroy']);
 
 // cara ke 2 //
-route::middleware(['auth:sanctum'])->group(function () {
+// route::middleware(['auth:sanctum'])->group(function () {
 route::post('logout',[AuthController::class, 'logout']);
 route::resource('kategori', KategoriController::class);
 route::resource('genre', GenreController::class);
 route::resource('aktor', AktorController::class);
 route::resource('film', FilmController::class);
-});
+// });
 // auth//
 Route::post('login', [AuthController::class, 'login']);
 Route::post('register', [AuthController::class, 'register']);
